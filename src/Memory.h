@@ -10,7 +10,7 @@
 
   BLOCK NUMBER FROM 65 TO 129 (512 bytes /4 bytes(size per block) = 129 blocks)*/
   #define RTC_MEMORY_SLEEP_TIME_REF_ADDR   65
-  // #define RTC_MEMORY_Y_REF_ADDR   66
+  #define RTC_MEMORY_BOOT_COUNTS_REF_ADDR   66
   // #define RTC_MEMORY_Z_REF_ADDR   67
   #define RTC_FIRST_STARTUP_ADDR  68
   // #define RTC_LAST_STATUS_ADDR    69

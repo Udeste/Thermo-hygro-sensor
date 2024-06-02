@@ -48,7 +48,7 @@
   #define BATTERY_CAPACITY_LABEL   "capacity"   // Define it in platform.ini file
   #define HEATINDEX_LABEL          "heat-index"  // Define it in platform.ini file 
 
-
+  #define BOOT_COUNTS_SLEEP_TIME_READ 6 // If sleep time is 600 seconds = 10min * 6 = 1h. Every hour it reads the sleep-time from remote
 
   /*
     Measured voltage map (WiFi ON)
