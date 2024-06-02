@@ -3,8 +3,6 @@
 #include "SensorHandler.h"
 #include "PowerManagement.h"
 #include "Settings.h"
-// #include "BlynkAPIHandler.h"
-#include "UbidotsAPIHandler.h"
 #include "WifiHandler.h"
 #include "utilities.h"
 #include "Memory.h"
