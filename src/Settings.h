@@ -16,8 +16,8 @@
    * WAKE_NO_RFCAL = 2,   // no RF_CAL after deep-sleep wake up, there will only be small current.
    * WAKE_RF_DISABLED = 4 // disable RF after deep-sleep wake up, just like modem sleep, there will be the smallest current.
   */
-  #define WAKE_METHOD            WAKE_RF_DISABLED
-  #define POWER_SLEEP_TIME       60 //seconds
+  #define WAKE_METHOD              WAKE_RF_DISABLED
+  #define DEFAULT_POWER_SLEEP_TIME 60 //seconds
 
   /*
    * WIFI SETUP
@@ -34,19 +34,20 @@
    * UBIDOTS SETUP
    * DEFINED IN platform.ini file
    */
-  // #define API_HOST               "50.23.124.68"
-  // #define API_ENDPOINT           "http://50.23.124.68/api/v1.6" // things.ubidots.com
-  // #define API_PORT               80
-  // #define API_TOKEN              "Y"
+  
 
-  // #define DEVICE_LABEL             "esp-07s_1"
+  /* 
+   * SENSORS LABELS 
+   */
 
-  // #define SLEEP_LABEL              "sleep-time"
-  // #define TEMPERATURE_LABEL        "temp"
-  // #define HUMIDITY_LABEL           "humidity"
-  // #define BOARD_VOLTAGE_LABEL      "voltage"
-  // #define BATTERY_CAPACITY_LABEL   "capacity"
-  // #define HEATINDEX_LABEL          "heat-index"
+  // #define DEVICE_LABEL             "esp-07s_1"  // Define it in platform.ini file
+  #define SLEEP_LABEL              "sleep-time"  // Define it in platform.ini file 
+  #define TEMPERATURE_LABEL        "temp"   // Define it in platform.ini file
+  #define HUMIDITY_LABEL           "humidity"   // Define it in platform.ini file
+  #define BOARD_VOLTAGE_LABEL      "voltage"  // Define it in platform.ini file
+  #define BATTERY_CAPACITY_LABEL   "capacity"   // Define it in platform.ini file
+  #define HEATINDEX_LABEL          "heat-index"  // Define it in platform.ini file 
+
 
 
   /*

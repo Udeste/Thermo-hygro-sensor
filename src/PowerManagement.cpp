@@ -6,7 +6,7 @@ ADC_MODE(ADC_VCC);
 
 void PowerManager::goToSleep(int seconds) {
   if (NULL == seconds || seconds <= 0) {
-    seconds = POWER_SLEEP_TIME;
+    seconds = DEFAULT_POWER_SLEEP_TIME;
   }
   #ifdef SERIAL_DEBUG
     Serial.printf("Going to sleep for %d seconds.. zzz", seconds);
