@@ -9,13 +9,9 @@
 
 SensorHandler sensorHandler;
 PowerManager powerManager;
-WifiHandler wifiHandler;
+WifiHandler wifiHandler(WIFI_SSID, WIFI_PASSWORD);
 APIHandler apiHandler;
 sensors_data_t sensors_data;
-
-void preinit() {
-  ESP8266WiFiClass::preinitWiFiOff();
-}
 
 void setup(){
   #ifdef SERIAL_DEBUG
@@ -53,7 +49,7 @@ void setup(){
   /*
    * Connect wifi
    */
-  wifiConnected = wifiHandler.connect(WIFI_SSID, WIFI_PASSWORD);
+  wifiConnected = wifiHandler.connect();
 
   if (wifiConnected == true) {
     /*

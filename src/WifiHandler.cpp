@@ -3,7 +3,10 @@
 #include "IPAddress.h"
 #include <ESP8266WiFi.h>
 
-WifiHandler::WifiHandler() { }
+WifiHandler::WifiHandler(const char* ssid, const char* password) {
+  this->_ssid = ssid;
+  this->_password = password;
+}
 
 void WifiHandler::disable() {
   this->disconnect();
@@ -28,8 +31,8 @@ void WifiHandler::enable() {
   #endif
 }
 
-bool WifiHandler::connect(const char* ssid, const char* password){
-    WiFi.begin(ssid, password);
+bool WifiHandler::connect(){
+    WiFi.begin(this->_ssid, this->_password);
     unsigned long wifiConnectStart = millis();
 
     while (WiFi.status() != WL_CONNECTED) {

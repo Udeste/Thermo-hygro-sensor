@@ -3,10 +3,10 @@
 
   class WifiHandler {
     public:
-      WifiHandler();
+      WifiHandler(const char* ssid, const char* password);
       void enable();
       void disable();
-      bool connect(const char* ssid, const char* password);
+      bool connect();
       void disconnect();
     private:
       const char* _ssid;
