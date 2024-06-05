@@ -31,9 +31,13 @@
   // #define WIFI_PASSWORD          """ // Define it in platform.ini file
 
   /*
-   * UBIDOTS SETUP
+   * MQTT CONFIG
    * DEFINED IN platform.ini file
    */
+  // #define MQTT_TOPIC_PUB          "sensors/esp-07s"  // Define it in platform.ini file
+  // #define MQTT_TOPIC_SUB          "sensors/esp/sleep-time"  // Define it in platform.ini file
+  // #define MQTT_HOST               "hub.ec2"  // Define it in platform.ini file
+  // #define MQTT_PORT               1883  // Define it in platform.ini file
   
 
   /* 

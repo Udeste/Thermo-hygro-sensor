@@ -6,11 +6,12 @@
 #include "WifiHandler.h"
 #include "utilities.h"
 #include "Memory.h"
+#include "MQTTAPIHandler.h"
 
 SensorHandler sensorHandler;
 PowerManager powerManager;
 WifiHandler wifiHandler(WIFI_SSID, WIFI_PASSWORD);
-APIHandler apiHandler;
+MQTTAPIHandler apiHandler;
 sensors_data_t sensors_data;
 
 void setup(){
