@@ -64,6 +64,11 @@ void setup(){
   uint32_t bootCounts = readValueFromRTC(RTC_MEMORY_BOOT_COUNTS_REF_ADDR);
   bool shouldUpdateSleepTime = bootCounts == BOOT_COUNTS_SLEEP_TIME_READ;
 
+  #ifdef SERIAL_DEBUG
+    Serial.println("Boot counts from RTC");
+    Serial.println(bootCounts);
+  #endif
+
   if (firstStart || shouldUpdateSleepTime) {
     if (wifiConnected) {
       sleepTime = apiHandler.readValue(SLEEP_LABEL);
@@ -80,7 +85,7 @@ void setup(){
       Serial.println("Reading sleeptime from RTC: ");
       Serial.println(sleepTime);
     #endif
-    saveValueToRTC(RTC_MEMORY_BOOT_COUNTS_REF_ADDR, bootCounts++);
+    saveValueToRTC(RTC_MEMORY_BOOT_COUNTS_REF_ADDR, bootCounts + 1);
   }
 
   /*
