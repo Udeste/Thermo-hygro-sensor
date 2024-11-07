@@ -22,11 +22,11 @@
   /*
    * WIFI SETUP
    */
-  #define STATIC_IP              IPAddress(192, 168, 1,  151)
+  #define STATIC_IP              IPAddress(192, 168, 5,  250)
   #define STATIC_SUBNET          IPAddress(255, 255, 255, 0)
-  #define STATIC_GATEWAY         IPAddress(192, 168, 1,  1)
-  #define STATIC_DNS1            IPAddress(192, 168, 1,  201)
-  #define STATIC_DNS2            IPAddress(192, 168, 1,  201)
+  #define STATIC_GATEWAY         IPAddress(192, 168, 5,  1)
+  #define STATIC_DNS1            IPAddress(192, 168, 5,  1)
+  #define STATIC_DNS2            IPAddress(192, 168, 5,  1)
   // #define WIFI_SSID              "" // Define it in platform.ini file
   // #define WIFI_PASSWORD          """ // Define it in platform.ini file
 
