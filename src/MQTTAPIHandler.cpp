@@ -69,7 +69,8 @@ void MQTTAPIHandler::sendValue(sensors_data_t* sensors_data) {
 
 int MQTTAPIHandler::readValue(char* pin) {
   messageArrived = false;
-  
+  uint32_t retries = 100000;
+
   if (!client.connected()) {
     client.connect(DEVICE_LABEL);
   }
@@ -80,9 +81,14 @@ int MQTTAPIHandler::readValue(char* pin) {
 
   client.subscribe(MQTT_TOPIC_SUB);
 
-  while (!messageArrived) {
+  while (!messageArrived && retries > 0) {
     client.loop();
+    retries--;
   }
+
+  #ifdef SERIAL_DEBUG
+    Serial.println(retries);
+  #endif  
 
   return sleepTime;
 }
