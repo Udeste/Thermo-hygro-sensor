@@ -11,8 +11,11 @@ An tiny ultra low power thermo-hygro sensor made with a DHT22 sensor and ESP8266
 - Some connecting wires
 
 # Schematics
-## PCB V1
-// TODO
+## PCB V3
 
-## PCB V2
-// TODO
+<img src="docs/PCB_V3_ANGLED.png" alt="PCB_V3_ANGLED" width="24%" height="auto">
+<img src="docs/PCB_V3_TOP.png" alt="PCB_V3_TOP" width="24%" height="auto">
+<img src="docs/PCB_V3_BOTTOM.png" alt="PCB_V3_BOTTOM" width="24%" height="auto">
+<img src="docs/PCB_V3_LEFT.png" alt="PCB_V3_LEFT" width="24%" height="auto">
+
+
